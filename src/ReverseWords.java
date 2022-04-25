@@ -4,10 +4,14 @@ public class ReverseWords {
     public static void main(String[] args) {
 
         ReverseWords obj = new ReverseWords();
-        String isGameFinished = obj.spinWords("hello Hii");
+        String newword = obj.reverseWords("hello Hii");
     }
 
-    public String spinWords(String sentence) {
+    public static String reverseWords(final String original) {
+
+    }
+
+    public static String reverse(String s) {
 
     }
 }
