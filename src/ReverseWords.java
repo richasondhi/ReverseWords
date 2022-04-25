@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class ReverseWords {
     public static void main(String[] args) {
@@ -20,6 +21,9 @@ public class ReverseWords {
     }
 
     public static String reverse(String s) {
-
+        byte[] bytes = new byte[s.length()];
+        IntStream.iterate(s.length() - 1, i -> i - 1).limit(s.length())
+                .forEach(value -> bytes[s.length() - value - 1] = s.getBytes()[value]);
+        return new String(bytes);
     }
 }
